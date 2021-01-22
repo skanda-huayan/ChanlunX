@@ -25,6 +25,7 @@ ChanlunX.txt
 其中ChanlunX.dll，绑定在1号DLL
 然后添加公式：拷贝ChanlunX.txt，创建新公式，即可。
 
+```
 #通達信輸出函數說明#
 1 K線方向
 2 是否有包含關係的K線
@@ -37,6 +38,7 @@ ChanlunX.txt
 9 中樞低點數據
 10 中樞起點、終點信號
 11 中樞方向數據
+```
 
 skanda.huayan
 2021.01.21
