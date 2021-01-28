@@ -97,6 +97,18 @@ typedef struct tagCALCINFO
     const float*		m_pfFinData;			//财务数据
 } CALCINFO;
 
+/* 
+注: 
+	1.函数调用参数由m_pfParam1--m_pfParam4带入,若为NULL则表示该参数无效.
+	2.当一个参数无效时,则其后的所有参数均无效.
+		如:m_pfParam2为NULL,则m_pfParam3,m_pfParam4一定为NULL.
+	3.参数1可以是常数参数或序列数参数,其余参数只能为常数参数.
+	4.若m_nParam1Start<0, 则参数1为常数参数,参数等于*m_pfParam1;
+	5.若m_nParam1Start>=0,则参数1为序列数参数,m_pfParam1指向一个浮点型数组,
+		数组大小为m_nNumData,数据有效范围为m_nParam1Start--m_nNumData.
+		在时间上m_pData[x] 与 m_pfParam1[x]是一致的
+*/
+
 #ifdef __cplusplus
 extern "C" {
 #endif
