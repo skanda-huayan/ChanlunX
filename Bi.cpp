@@ -384,7 +384,7 @@ void Bi0(int nCount, float *pOut, float *pIn, float *pHigh, float *pLow)
                     }
                     else
                     {
-                        if (pOutHigh[i] > RangeHign(pOutHigh, nLastD))
+                        if (pOutHigh[i] > RangeHigh(pOutHigh, nLastD))
                         {
                             kCountUp++;
                         }
@@ -570,7 +570,7 @@ void Bi1(int nCount, float *pOut, float *pIn, float *pHigh, float *pLow)
                 }
                 kCountUpRaw++;
                 if (((kCountUp >= 4 && kCountUpRaw >=5) || IsStrongMove(i, nState, nLastD, nLastG, pHigh, pLow, pOut) || IsReverseJump(i, nState, nLastD, nLastG, pHigh, pLow)) &&
-                        LastIsMax(pHigh, nLastD, i) && (iFenXingQuJian == 1 ? pOutHigh[i] > RangeHign(pOutHigh, nLastD) : pOutHigh[i] > pOutHigh[nLastD]))
+                        LastIsMax(pHigh, nLastD, i) && (iFenXingQuJian == 1 ? pOutHigh[i] > RangeHigh(pOutHigh, nLastD) : pOutHigh[i] > pOutHigh[nLastD]))
                 {
                     nState = 1;
                     nLastG = i;
