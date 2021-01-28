@@ -190,7 +190,7 @@ int LastIsMax(float *pHigh, int fromIndex, int toIndex)
 }
 
 // 计算底分型中间K线区间高
-float RangeHign(float *pOutHigh, int nLastD)
+float RangeHigh(float *pOutHigh, int nLastD)
 {
     for (int i = nLastD - 1; i >= 0; i--)
     {
@@ -735,7 +735,7 @@ void Bi2(int nCount, float *pOut, float *pIn, float *pHigh, float *pLow)
                     kCountUp++;
                 }
                 if ((kCountUp >= 5 || IsStrongMove(i, nState, nLastD, nLastG, pHigh, pLow, pOut) || IsReverseJump(i, nState, nLastD, nLastG, pHigh, pLow)) &&
-                        LastIsMax(pHigh, nLastD, i) && (iFenXingQuJian == 1 ? pOutHigh[i] > RangeHign(pOutHigh, nLastD) : pOutHigh[i] > pOutHigh[nLastD]))
+                        LastIsMax(pHigh, nLastD, i) && (iFenXingQuJian == 1 ? pOutHigh[i] > RangeHigh(pOutHigh, nLastD) : pOutHigh[i] > pOutHigh[nLastD]))
                 {
                     nState = 1;
                     nLastG = i;
