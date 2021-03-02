@@ -42,3 +42,28 @@ ChanlunX.txt
 
 skanda.huayan
 2021.01.21
+
+#ChanlunX-DZH輸出函數說明#
+大智慧版ChanlunX，一共11個輸出函數，如下：
+[code]1 K線包含處理 / KXBH
+2 包含處理後的K線高點 / KXBHG
+3 包含處理後的K線低點 / KXBHD
+4 K線方向 / KXFX
+5 處理包含信號，方便畫線 / KXBH2VAR
+6 筆頂底 / BI
+7 線段頂底 / DUANVAR
+8 中樞高點 / ZSZGVAR
+9 中樞低點 / ZSZDVAR
+10 中樞起點、終點 / ZSSEVAR
+11 中樞方向 / ZSFXVAR[/code]
+
+說明：
+1 函數名不帶VAR的，可以直接調用，如：
+[code]bi:=“suChan@BI”;[/code]
+2 函數名帶VAR的，需要傳入一個參數，例：
+[code]duan:=“suChan@DUANVAR”(bi);[/code]
+
+具體使用可以看公式～
+
+纏海一粟
+2021.02.28
